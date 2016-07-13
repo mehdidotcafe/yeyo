@@ -1,0 +1,33 @@
+{
+  "albums": {
+    "name": "",
+    "isLoved": false,
+    "picture": "",
+    "year": 0,
+    "songs": [""]
+  },
+
+  "artists": {
+    "name": "",
+    "isLoved": false,
+    "picture": "",
+    "albums": [""]
+  },
+
+  "songs": {
+    "title": "",
+    "album": "",
+    "artists": [],
+    "path": "",
+    "duration": 4.21,
+    "numebr": 1,
+    "isLoved": false
+  },
+
+  "playlists": {
+    "name": "",
+    "isLoved": false,
+    "picture": "",
+    "songs": [""]
+  }
+}

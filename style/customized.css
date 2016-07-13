@@ -1,0 +1,88 @@
+.prev-button-color
+{
+  fill: #001f3f;
+}
+
+.play-button-color
+{
+  fill: #001f3f;
+}
+
+.stop-button-color
+{
+  fill: #001f3f;
+}
+
+.next-button-color
+{
+  fill: #001f3f;
+}
+
+.shuffle-button-color
+{
+  transition: 0.2s;
+  fill: #001f3f;
+}
+
+.shuffle-button-color.checked, .shuffle-button-color:hover
+{
+  transition: 0.2s;
+  fill: #39CCCC;
+}
+
+.repeat-button-color
+{
+  transition: 0.2s;
+  fill: #001f3f;
+}
+
+.repeat-button-color.checked, .repeat-button-color:hover
+{
+  transition: 0.2s;
+  fill: #39CCCC;
+}
+
+.import-button-color
+{
+  fill: #001f3f;
+}
+
+.settings-button-color
+{
+  fill: #001f3f;
+}
+
+.reduce-button-color
+{
+  fill: #001f3f;
+}
+
+.maximize-button-color
+{
+  fill: #001f3f;
+}
+
+.exit-button-color
+{
+  fill: #001f3f;
+}
+
+.toolbar-color
+{
+  background-color: #4C2559;
+}
+
+.song-container-color
+{
+  background-color: #DDDDDD;
+}
+
+.volume-under-gui-color
+{
+  background-color: rgb(128, 0, 0);
+}
+
+.seek-under-gui-color
+{
+  background-color: rgb(29, 43, 25);
+}

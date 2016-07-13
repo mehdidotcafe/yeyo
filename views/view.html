@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title id="title">yeyo</title>
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+  <link rel="stylesheet" type="text/css" href="../style/customized.css">
+</head>
+<body>
+  <header id="toolbar" class="toolbar-color">
+    <section id="action-music-container">
+      <div id="prev-button" class="action" onclick="playPrev()">
+        <svg title="Play Previous Music !" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 446.25 446.25" xml:space="preserve" class="prev-button-color">
+          <g>
+          	<path d="M216.75,376.125v-306L0,223.125L216.75,376.125z M229.5,223.125l216.75,153v-306L229.5,223.125z"/>
+          </g>
+        </svg>
+      </div>
+      <div id="play-button" class="action" onclick="toggleMusic()">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60" xml:space="preserve" class="play-button-color">
+        	<g>
+        		<path d="M53.479,27.435L10.672,0.915C7.553-1.132,5,0.374,5,4.261v51.48c0,3.885,2.553,5.391,5.672,3.346
+        			l42.807-26.52c0,0,1.521-1.07,1.521-2.566S53.479,27.435,53.479,27.435z"/>
+        	</g>
+        </svg>
+      </div>
+      <div id="stop-button" class="action hidden" onclick="toggleMusic()">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 357 357" xml:space="preserve" class="stop-button-color">
+        	<g>
+        		<path d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z"/>
+        	</g>
+        </svg>
+      </div>
+      <div id="next-button" class="action" onclick="playNext()">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 446.25 446.25" xml:space="preserve" class="next-button-color">
+        	<g>
+        		<path d="M0,376.125l216.75-153L0,70.125V376.125z M229.5,70.125v306l216.75-153L229.5,70.125z"/>
+        	</g>
+        </svg>
+      </div>
+      <div id="little-button">
+        <svg onclick="shuffle()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 95.617 95.617" xml:space="preserve" id="shuffle-button" class="shuffle-button-color">
+        	<g>
+        		<path d="M73.307,36.568v6.316c0,0.756,0.426,1.446,1.1,1.786c0.675,0.34,1.482,0.271,2.09-0.179l18.311-13.565
+        			c0.51-0.377,0.811-0.974,0.811-1.607c0-0.633-0.301-1.229-0.811-1.605L76.496,14.147c-0.607-0.45-1.416-0.52-2.09-0.18
+        			s-1.1,1.031-1.1,1.786v6.315H46.533c-0.718,0-1.38,0.386-1.736,1.009L24.244,59.042H2c-1.104,0-2,0.896-2,2v10.498
+        			c0,1.104,0.896,2,2,2h29.497c0.718,0,1.38-0.385,1.736-1.008l20.552-35.966L73.307,36.568L73.307,36.568z"/>
+        		<path d="M94.807,64.692L76.496,51.126c-0.607-0.449-1.416-0.52-2.09-0.179c-0.674,0.34-1.1,1.029-1.1,1.785v6.316H53.785
+        			l-4.696-8.218L40.74,65.441l4.056,7.099c0.356,0.623,1.019,1.008,1.736,1.008h26.772v6.316c0,0.755,0.426,1.445,1.101,1.785
+        			c0.674,0.341,1.483,0.271,2.09-0.18l18.312-13.565c0.508-0.377,0.81-0.973,0.81-1.605S95.316,65.069,94.807,64.692z"/>
+        		<path d="M2,36.577h22.244l4.692,8.21l8.349-14.61l-4.052-7.09c-0.356-0.623-1.019-1.008-1.736-1.008H2c-1.104,0-2,0.896-2,2
+        			v10.498C0,35.68,0.895,36.577,2,36.577z"/>
+        	</g>
+        </svg>
+        <svg onclick="repeat()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490.89 490.89" xml:space="preserve" id="repeat-button" class="repeat-button-color">
+          <g>
+        	   <path d="M97.38,292.692V181.229c0-24.324,19.792-44.125,44.134-44.125h170.733v19.506
+        		   c0,5.525,3.065,10.59,7.941,13.162c4.884,2.59,10.786,2.229,15.343-0.885l100.888-69.057c3.607-2.475,5.771-6.557,5.788-10.934
+        		   c0.015-4.377-2.124-8.49-5.722-10.965L335.63,7.956c-4.548-3.146-10.483-3.508-15.383-0.949c-4.91,2.557-7.975,7.653-7.975,13.178
+        		   v19.539H141.515C63.483,39.724,0,103.208,0,181.229v111.463c0,26.881,21.801,48.684,48.689,48.684
+        		   C75.58,341.376,97.38,319.573,97.38,292.692z"/>
+        	    <path d="M442.199,149.513c-26.891,0-48.691,21.801-48.691,48.701V309.64c0,24.342-19.793,44.143-44.134,44.143
+        		    H178.641v-19.506c0-5.523-3.065-10.588-7.941-13.162c-4.884-2.572-10.786-2.23-15.343,0.887L54.468,391.056
+        		    c-3.606,2.477-5.771,6.572-5.786,10.951c-0.017,4.359,2.122,8.475,5.72,10.965l100.856,69.961
+        		    c4.548,3.147,10.482,3.504,15.384,0.965c4.908-2.572,7.974-7.654,7.974-13.195v-19.539h170.756
+        		    c78.031,0,141.516-63.498,141.516-141.523V198.214C490.89,171.313,469.088,149.513,442.199,149.513z"/>
+          </g>
+      </svg>
+      </div>
+    </section>
+    <section id="gui-container">
+      <div class="gui" id="volume-gui" onclick="am.setVolume(event)">
+        <aside class="volume-under-gui-color" id="volume-under-gui"></aside>
+        <aside id="volume-under-value"></aside>
+      </div>
+      <div class="gui" id="seek-gui" onclick="am.setSeek(event)">
+        <aside class="seek-under-gui-color" id="seek-under-gui"></aside>
+        <aside id="seek-under-value"></aside>
+      </div>
+    </section>
+    <section id="current-song-container">
+      <img id="current-song-cover" src="../resources/images/default-pictures/logo.png"/>
+      <aside id="current-song-info">
+        <div class="album-song album-info"></div>
+        <div class="album-album album-info"></div>
+        <div class="album-artist album-info"></div>
+      </aside>
+    </section>
+    <section id="filter-container-super" class="gui">
+      <input type="text" id="filter-container" placeholder="Rechercher dans votre bibliotheque"></input>
+      <img src="../resources/images/delete.svg" onclick="uiRender.cleanFilter(albums)">
+    </section>
+    <section id="action-file-container">
+      <svg id="import" onclick="openFile()" title="Importer des musiques" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510 510" xml:space="preserve" class="import-button-color">
+      	<g>
+      		<path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M382.5,280.5h-102v102h-51v-102
+      			h-102v-51h102v-102h51v102h102V280.5z"/>
+        </g>
+      </svg>
+      <svg id="settings" class="settings-button-color" onclick="settings()" title="Configurer Yeyo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 234 234" xml:space="preserve">
+        <g>
+      	   <path d="M7.5,42.571h39.235c3.327,12.646,14.856,22,28.531,22s25.204-9.354,28.531-22H226.5
+      		c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H103.796c-3.327-12.646-14.856-22-28.531-22s-25.204,9.354-28.531,22H7.5
+      		c-4.142,0-7.5,3.358-7.5,7.5S3.358,42.571,7.5,42.571z M75.266,20.571c7.995,0,14.5,6.505,14.5,14.5s-6.505,14.5-14.5,14.5
+      		c-7.995,0-14.5-6.505-14.5-14.5S67.271,20.571,75.266,20.571z"/>
+      	<path d="M226.5,109.5h-49.99c-3.327-12.646-14.856-22-28.531-22c-13.675,0-25.204,9.354-28.531,22H7.5
+      		c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h111.949c3.327,12.645,14.856,22,28.531,22c13.675,0,25.204-9.355,28.531-22h49.99
+      		c4.142,0,7.5-3.358,7.5-7.5S230.642,109.5,226.5,109.5z M147.98,131.5c-7.995,0-14.5-6.505-14.5-14.5s6.505-14.5,14.5-14.5
+      		c7.995,0,14.5,6.505,14.5,14.5S155.975,131.5,147.98,131.5z"/>
+      	<path d="M226.5,191.429H103.796c-3.327-12.645-14.856-22-28.531-22s-25.204,9.355-28.531,22H7.5
+      		c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h39.235c3.327,12.646,14.856,22,28.531,22s25.204-9.354,28.531-22H226.5
+      		c4.142,0,7.5-3.358,7.5-7.5C234,194.787,230.642,191.429,226.5,191.429z M75.266,213.429c-7.995,0-14.5-6.505-14.5-14.5
+      		s6.505-14.5,14.5-14.5c7.995,0,14.5,6.505,14.5,14.5S83.261,213.429,75.266,213.429z"/>
+      </g>
+    </svg>
+      <aside id="window-buttons">
+        <svg class="action-window-button reduce-button-color" onclick="reduce()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280 280" xml:space="preserve">
+          <path d="M275.455,0H4.545C2.033,0,0,2.035,0,4.544v270.911C0,277.965,2.033,280,4.545,280h270.91c2.51,0,4.545-2.035,4.545-4.544
+        	 V4.544C280,2.035,277.965,0,275.455,0z M230.371,227H49.629v-30h180.742V227z"/>
+        </svg>
+        <svg class="action-window-button maximize-button-color" onclick="maximize()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 518.765 518.765" xml:space="preserve">
+          <g>
+        		<path d="M385.487,283.289l53.786-53.192v255.2c0,7.57-2.688,13.945-8.065,19.125s-11.654,7.77-18.826,7.77
+        			H26.894c-7.172,0-13.447-2.59-18.826-7.77S0,492.867,0,485.297V119.531c0-7.57,2.689-13.945,8.068-19.125s11.654-7.77,18.826-7.77
+        			h273.127l-53.791,53.789H53.787v311.977h331.702L385.487,283.289L385.487,283.289z M307.194,30.48l48.407,46.617L193.64,239.062
+        			l97.418,97.416l161.965-161.964l50.203,51.398l15.539-219.34L307.194,30.48z"/>
+        	</g>
+        </svg>
+        <svg class="action-window-button exit-button-color" onclick="exit()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.965 27.965" xml:space="preserve">
+        	<g>
+        		<path d="M13.98,0C6.259,0,0,6.261,0,13.983c0,7.721,6.259,13.982,13.98,13.982c7.725,0,13.985-6.262,13.985-13.982
+        			C27.965,6.261,21.705,0,13.98,0z M19.992,17.769l-2.227,2.224c0,0-3.523-3.78-3.786-3.78c-0.259,0-3.783,3.78-3.783,3.78
+        			l-2.228-2.224c0,0,3.784-3.472,3.784-3.781c0-0.314-3.784-3.787-3.784-3.787l2.228-2.229c0,0,3.553,3.782,3.783,3.782
+        			c0.232,0,3.786-3.782,3.786-3.782l2.227,2.229c0,0-3.785,3.523-3.785,3.787C16.207,14.239,19.992,17.769,19.992,17.769z"/>
+        	</g>
+        </svg>
+      </aside>
+    </section>
+  </header>
+  <nav id="song-container" class="song-container-color">
+    <section id="playlist-container">
+    </section>
+    <section id="liked-container">
+    </section>
+    <section id="album-container">
+    </section>
+  </nav>
+  <section id="info">
+    <header id="resize-it">
+    </header>
+    <table id="song-table">
+    </table>
+  </section>
+  <script src="../js/GUI/uiRender.js"></script>
+  <script src="../js/GUI/gesturesManager.js"></script>
+  <script src="../js/audio/audioManager.js"></script>
+  <script src="../js/yeyo.js"></script>
+</body>
+</html>
